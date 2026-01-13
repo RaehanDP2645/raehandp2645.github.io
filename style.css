@@ -2,15 +2,82 @@
     --accent: #0d6efd;
     scroll-behavior:smooth;
   }
-  body{ padding-top: 72px; margin-top: -15px;}
-  .shadow-soft{box-shadow:0 10px 30px rgba(0,0,0,.06)}
-  .rounded-2xl{border-radius:1rem}
-  .section{padding: 72px 0}
-  .hero{background:linear-gradient(180deg, rgba(13,110,253,.05), transparent),
-         radial-gradient(1000px 500px at 80% -20%, rgba(13,110,253,.08), transparent)}
+
+  body{ 
+    padding-top: 72px; 
+    margin-top: -15px;
+    transition: background-color .3s, color .3s;
+}
+  .shadow-soft{
+    box-shadow:0 10px 30px rgba(0,0,0,.08)
+}
+
+.rounded-2xl{
+    border-radius: 1rem
+}
+
+  .section{
+    padding: 70px 0;
+}
+
+
+/* =========================
+   FOOTER BACKGROUND TEXT
+   ========================= */
+
+   .footer {
+    position: relative;
+    min-height: 175px;
+    padding-bottom: 120px;
+  }
+  
+  /* pseudo element buat PNG */
+  .footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -70px;
+    height: 100%;
+    background-image: url("assets/sean-obrien-logo-outline-1.png"); /* ganti manual */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 110%;
+    opacity: 0.08;
+    pointer-events: none;
+  }
+  
+  
+  [data-bs-theme="light"] .footer::before {
+    opacity: 0.12;
+  }
+  
+  [data-bs-theme="dark"] .footer::before {
+    opacity: 0.12;
+  }
+
+
+
+/* Icon toggle theme */
+.btn-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .25s, color .25s;
+}
+
+
+  .hero{
+    background: linear-gradient(180deg, rgba(13,110,253,.05), transparent),
+    radial-gradient(1000px 500px at 80% -20%, rgba(13,110,253,.08), transparent)
+}
+
   .avatar{
 width:250px;
-height:250px;           /* supaya bulatnya konsisten */
+height:250px;
 overflow:hidden;
 border-radius:50%;
 border:4px solid #fff;
@@ -22,10 +89,6 @@ width:100%;
 height:100%;
 object-fit:cover;
 transition:transform .4s ease;
-}
-
-.section-hero {
-    padding: 40px;
 }
 
 .avatar:hover img{
@@ -44,3 +107,86 @@ transform:scale(1.2);
   .back-to-top{position:fixed;right:16px;bottom:16px;z-index:1030;display:none}
   footer a{color:inherit}
   .kbd{border:1px solid rgba(0,0,0,.15);border-bottom-width:2px;padding:.1rem .35rem;border-radius:.4rem;font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;font-size:.8rem}
+
+
+/* =========================
+   LIGHT MODE
+   ========================= */
+   [data-bs-theme="light"] body {
+    background-color: #ffffff;
+    color: #212529;
+  }
+
+  [data-bs-theme="light"] .navbar {
+    background-color: #ffffff;
+  }
+
+  [data-bs-theme="light"] footer {
+    background-color: #ffffff00;
+  }
+  
+  [data-bs-theme="light"] .card,
+  [data-bs-theme="light"] .shadow-soft,
+  [data-bs-theme="light"] .modal-content {
+    background-color: #ffffff;
+    border-color: #dee2e6;
+  }
+  
+  [data-bs-theme="light"] .badge {
+    background-color: #4d95ff30;
+    color: #212529;
+  }
+  
+  [data-bs-theme="light"] .btn-icon {
+    background-color: #f1f3f5;
+    color: #212529;
+  }
+
+
+  /* =========================
+     DARK MODE
+     ========================= */
+  [data-bs-theme="dark"] body {
+    background-color: #0d1117;
+    color: #e6edf3;
+  }
+
+  [data-bs-theme="dark"] .navbar{
+    background-color: #0d1117;
+  }
+
+  [data-bs-theme="dark"] footer {
+    background-color: #0d111700;
+    border-color: #30363d;
+  }
+  
+  [data-bs-theme="dark"] .card,
+  [data-bs-theme="dark"] .shadow-soft,
+  [data-bs-theme="dark"] .modal-content {
+    background-color: #161b22;
+    border-color: #30363d;
+  }
+  
+  [data-bs-theme="dark"] .badge {
+    background-color: #0c1a2d;
+    color: #e6edf3;
+  }
+
+  [data-bs-theme="dark"] .btn-icon {
+    background-color: #21262d;
+    color: #e6edf3;
+  }
+  
+  /* =========================
+     FORM
+     ========================= */
+  [data-bs-theme="dark"] .form-control,
+  [data-bs-theme="dark"] .form-select {
+    background-color: #0d1117;
+    color: #e6edf3;
+    border-color: #30363d;
+  }
+  
+  [data-bs-theme="dark"] .form-control::placeholder {
+    color: #8b949e;
+  }
