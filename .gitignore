@@ -1,1 +1,6 @@
-*.md
+PROJECT UPDATE PORTOFOLIO.md
+node_modules/
+dist/
+.env.local
+.env.*.local
+.DS_Store
