@@ -1,0 +1,27 @@
+{
+  "name": "Raehan",
+  "title": "Backend Developer & DevOps",
+  "subtitle": "Web Developer • IT Support",
+  "bio": "Suka kepo tentang hal-hal yang berbau Teknologi",
+  "about": "Rehan adalah manusia yang tertarik di bidang komputer, IT support, dan desain web. Familiar dengan HTML, CSS/Bootstrap, JavaScript, dan sedikit backend Node/Java Spring, Laravel. Saya juga terbiasa ngotak-ngatik Linux terutama Debian distro dan Ubuntu distro.",
+  "values": [
+    "Mengutamakan fungsi sebuah sistem dan User Experience",
+    "Workflow Git & CI sederhana",
+    "Lebih menyukai desain simple"
+  ],
+  "stats": {
+    "experience": "2+ tahun",
+    "projects": "5",
+    "knowledge": "28%",
+    "mood": "Suka dengerin lagu dari Band Avenged Sevenfold"
+  },
+  "avatar": "/assets/pp-rey.jpg",
+  "icon": "/assets/rr.png",
+  "cv": "/assets/reyhan-cv.pdf",
+  "contact": {
+    "whatsapp": "https://wa.me/6281234567890",
+    "email": "you@example.com",
+    "github": "https://github.com/youruser",
+    "linkedin": "https://linkedin.com/in/youruser"
+  }
+}

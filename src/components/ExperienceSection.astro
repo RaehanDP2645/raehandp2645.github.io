@@ -1,0 +1,39 @@
+---
+import experience from '../data/experience.json';
+---
+
+<section id="experience" class="py-12 px-6 md:px-12 bg-slate-50 dark:bg-slate-900">
+  <h2 class="text-2xl md:text-4xl font-bold text-slate-900 dark:text-white mb-12">
+    Experience
+  </h2>
+
+  <div class="relative">
+    <!-- Vertical line -->
+    <div class="absolute left-4 md:left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-blue-300 dark:from-blue-400 dark:to-blue-600" />
+
+    <!-- Timeline items -->
+    <div class="space-y-8">
+      {experience.map((item, index) => (
+        <div class="pl-16 md:pl-24">
+          <!-- Dot on line -->
+          <div class="absolute left-1 md:left-3 w-7 h-7 bg-blue-500 dark:bg-blue-400 rounded-full border-4 border-slate-50 dark:border-slate-900 transform -translate-x-3 md:-translate-x-3.5" style={`top: ${index * 100}px`} />
+
+          <!-- Content card -->
+          <div class="p-6 bg-white dark:bg-slate-800 rounded-lg shadow hover:shadow-md transition-shadow">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="text-lg md:text-xl font-bold text-slate-900 dark:text-white">
+                {item.title}
+              </h3>
+              <span class="text-sm text-slate-500 dark:text-slate-400 whitespace-nowrap ml-4">
+                {item.period}
+              </span>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

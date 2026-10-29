@@ -1,0 +1,24 @@
+{
+  "methods": [
+    {
+      "label": "WhatsApp",
+      "url": "https://wa.me/6281234567890",
+      "icon": "whatsapp"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:you@example.com",
+      "icon": "mail"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/youruser",
+      "icon": "github"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/youruser",
+      "icon": "linkedin"
+    }
+  ]
+}

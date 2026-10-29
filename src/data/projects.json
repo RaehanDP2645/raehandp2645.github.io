@@ -1,0 +1,35 @@
+[
+  {
+    "id": "landing-umkm",
+    "title": "Landing Page UMKM",
+    "description": "Landing page cepat untuk promosi produk, skor Lighthouse 95+.",
+    "tags": ["web"],
+    "tech": ["Bootstrap", "SEO"],
+    "image": "/assets/project-1.jpg",
+    "details": "Teknologi: Bootstrap 5, Vanilla JS. Hasil: skor Lighthouse 95+, TTFB < 200ms (cache).",
+    "demoUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "id": "dashboard-admin",
+    "title": "Dashboard Admin",
+    "description": "Komponen UI responsif untuk monitoring data penjualan.",
+    "tags": ["ui"],
+    "tech": ["Charts", "Responsive"],
+    "image": "/assets/project-2.jpg",
+    "details": "Komponen reusable, tabel, dan layout yang responsif untuk data penjualan.",
+    "demoUrl": "#",
+    "repoUrl": "#"
+  },
+  {
+    "id": "it-support-toolkit",
+    "title": "IT Support Toolkit",
+    "description": "Kumpulan skrip ringan untuk otomasi troubleshooting Windows.",
+    "tags": ["tool"],
+    "tech": ["Batch", "CLI"],
+    "image": "/assets/project-3.jpg",
+    "details": "Automasi tugas rutin: flush DNS, bersih temp, cek disk, dan logs ringkas.",
+    "demoUrl": "#",
+    "repoUrl": "#"
+  }
+]

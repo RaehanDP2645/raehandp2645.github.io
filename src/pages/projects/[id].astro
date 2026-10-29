@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import projects from '../../data/projects.json';
+
+export function getStaticPaths() {
+  return projects.map(project => ({
+    params: { id: project.id },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+const notFound = !project;
+---
+
+<Layout title={project.title}>
+  <div class="min-h-screen bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+    <!-- Back button -->
+    <div class="max-w-4xl mx-auto px-6 py-8">
+      <a href="/" class="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-2">
+        ← Back to Portfolio
+      </a>
+    </div>
+
+    <!-- Project details -->
+    <div class="max-w-4xl mx-auto px-6 py-12">
+      <!-- Image -->
+      <img src={project.image} alt={project.title} class="w-full h-96 object-cover rounded-lg shadow-lg mb-8" />
+
+      <!-- Title and meta -->
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">{project.title}</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">{project.description}</p>
+
+      <!-- Tech stack -->
+      <div class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Tech Stack</h2>
+        <div class="flex flex-wrap gap-2">
+          {project.tech.map((tech) => (
+            <span class="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm font-medium">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="mb-8">
+        <h2 class="text-xl font-semibold text-gray-900 dark:text-white mb-3">Details</h2>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">{project.details}</p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex gap-4">
+        <a href={project.demoUrl} class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+          View Demo
+        </a>
+        <a href={project.repoUrl} class="px-6 py-3 bg-gray-300 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg hover:bg-gray-400 dark:hover:bg-gray-600 transition">
+          View Code
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

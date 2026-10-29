@@ -1,0 +1,9 @@
+{
+  "tags": ["HTML5", "CSS3 / Bootstrap 5", "C++", "Laravel (dasar)", "Git & GitHub", "Linux Server", "UI/UX dasar", "Troubleshooting IT"],
+  "proficiency": [
+    { "label": "Frontend", "percentage": 85 },
+    { "label": "Backend", "percentage": 65 },
+    { "label": "DevOps", "percentage": 80 },
+    { "label": "Support & Docs", "percentage": 90 }
+  ]
+}

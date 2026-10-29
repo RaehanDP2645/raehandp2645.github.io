@@ -1,0 +1,52 @@
+---
+import skills from '../data/skills.json';
+---
+
+<section id="skills" class="py-12 px-6 md:px-12 bg-white dark:bg-slate-800">
+  <div class="mb-12">
+    <h2 class="text-2xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8">
+      Skills
+    </h2>
+    
+    <!-- Tags section -->
+    <div class="mb-12">
+      <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase mb-4">
+        Teknologi
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {skills.tags.map((tag) => (
+          <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded-full text-sm font-medium">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <!-- Proficiency section -->
+    <div>
+      <h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase mb-6">
+        Proficiency
+      </h3>
+      <div class="space-y-6">
+        {skills.proficiency.map((skill) => (
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-slate-700 dark:text-slate-300 font-medium">
+                {skill.label}
+              </span>
+              <span class="text-sm text-slate-500 dark:text-slate-400">
+                {skill.percentage}%
+              </span>
+            </div>
+            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+              <div 
+                class="bg-blue-500 h-2 rounded-full transition-all duration-500"
+                style={`width: ${skill.percentage}%`}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
